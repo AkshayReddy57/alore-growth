@@ -36,7 +36,7 @@
           </span>
         </span>
         <div class="table-list">
-          <span style="display: inline-grid;" *ngFor="let table of segment?.tables">
+          <span style="display: inline-grid; margin-right: 45px" *ngFor="let table of segment?.tables">
             <button class="new-table" [style.border]="'3px solid ' + table?.color">
               <span class="dot" [ngStyle]="{'background': table.color}"></span>
               {{table?.icon}}
