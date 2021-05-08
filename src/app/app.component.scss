@@ -1,0 +1,196 @@
+.sidebar {
+  width: 4%;
+  background-color: #DCDCDC;
+  min-height: calc(98vh);
+  padding: 10px;
+}
+
+.side-panel {
+  width: 20%;
+  background-color: #E8E8E8;
+  min-height: calc(96vh);
+  height: 100%;
+  padding: 20px;
+}
+
+.right-panel {
+  padding-left: 50px !important;
+  padding-right: 0px !important;
+  padding: 20px;
+  width: 76%;
+}
+
+.main-container {
+  display: flex;
+  max-height: calc(95vh);
+}
+
+.form-control {
+  border: 1px solid grey !important;
+  height: 30px;
+  width: 280px;
+  // margin-left: 30px;
+  padding-left: 5px;
+}
+
+.segments {
+  color: black;
+  opacity: 0.6;
+  display: block;
+  margin-top: 20px;
+}
+
+.inverted::after {
+  content: " \02C4";
+  margin-left: 20px !important;
+  font-size: 20px;
+}
+
+.non-inverted::after {
+  content: " \02C5";
+  margin-left: 20px !important;
+  font-size: 20px;
+}
+
+
+.add-segment {
+  bottom: 0 !important;
+  margin-left: 3px;
+  margin-bottom: 20px;
+  position: fixed;
+  background-color: Blue;
+  color: white;
+  width: 15%;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100% 0%;
+  width: 36%;
+
+  button {
+    background: transparent;
+    border: 0;
+    transform: translateX(-40px);
+    cursor: pointer;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  margin-top: -16px !important;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  float: right;
+  margin-top: -20px;
+  margin-right: -10px;
+}
+
+.table-list {
+  display: flex;
+}
+
+.add-new-table {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  margin: 10px;
+  background: white;
+  padding-left: 33px;
+  padding-right: 33px;
+
+  width: 85px;
+  height: 85px;
+  &:hover {
+    border: 2px solid blue !important;
+  }
+}
+
+.new-table {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2rem;
+  margin: 10px;
+  background: white;
+  margin-right: 45px;
+  width: 85px;
+  height: 85px;
+
+  &:hover {
+    border: 2px solid blue !important;
+  }
+}
+
+.nav-icons {
+  top: 0;
+  right: 0;
+  position: fixed;
+  padding: 20px;
+
+  img {
+    margin-right: 20px;
+    width: 30px;
+  }
+
+}
+
+hr {
+  width: 75vw;
+  margin-top: 50px;
+}
+
+.cards {
+  margin-top: 40px;
+}
+
+.segments-list{
+  line-height: 2;
+  font-size: 18px;
+}
+
+
+
+.host::ng-deep.mat-tooltip {
+  /* your own custom styles here */
+  /* e.g. */
+  color: yellow !important;
+  background-color: blue;
+}
+
+.user-profile{
+  width: 60px;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.notifications {
+  width: 30px;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 95px;
+  padding-left: 25px;
+}
+
+.categories {
+  width: 30px;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  margin-bottom: 140px;
+  padding-left: 25px;
+}

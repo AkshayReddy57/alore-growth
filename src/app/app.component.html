@@ -1,0 +1,56 @@
+<div class="main-container">
+  <div class="sidebar">
+    <img class="user-profile" src="../../assets/user-profile.png">
+    <img class="notifications" src="../../assets/bell.png">
+    <img class="categories" src="../../assets/grid.png">
+
+  </div>
+  <div class="side-panel">
+    <h2><b>Prospector</b></h2>
+    <input type="text" class="form-control" placeholder="Search for a table or a segment">
+    <span class="segments"><b>SEGMENTS</b></span>
+
+    <div *ngFor="let segment of segments">
+      <span class="segments-list">
+        {{segment?.icon}} &nbsp;&nbsp; {{segment?.name}}
+      </span>
+    </div>
+    <button mat-button class="add-segment" (click)="addSegment()">+ Add as segment </button>
+  </div>
+
+  <div class="right-panel">
+    <div class="nav-icons">
+      <img src="../../assets/check-list.png" style="width: 30px;">
+      <img src="../../assets/cap.png" style="width: 30px;">
+      <img src="../../assets/cloud.png" style="width: 30px;">
+      <img src="../../assets/bell.png" style="width: 30px;">
+    </div>
+
+    <hr>
+
+    <div *ngFor="let segment of segments; let i = index">
+      <div class="cards">
+        <span style="font-size: 25px;">
+          <b> {{segment?.icon}}</b> {{segment?.name}}
+          <span class="non-inverted">
+          </span>
+        </span>
+        <div class="table-list">
+          <span style="display: inline-grid;" *ngFor="let table of segment?.tables">
+            <button class="new-table" [style.border]="'3px solid ' + table?.color">
+              <span class="dot" [ngStyle]="{'background': table.color}"></span>
+              {{table?.icon}}
+            </button>
+
+            <span style="text-align: center;"><b>{{table?.name}}</b></span>
+          </span>
+          <button mat-raised-button class="add-new-table" matTooltip="Add a new table"
+            [matTooltipPosition]="positionOptions"
+            aria-label="Button that displays a tooltip when focused or hovered over" (click)="addNewTable(segment, i)">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+.add-segment-form {
+  display: grid;
+}
+
+.form-control {
+  border: 1px solid grey !important;
+  height: 30px;
+  // width: 200px;
+  border-radius: 5px;
+
+  &:focus {
+    border: 1px solid blue;
+    outline: 1px solid blue;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+}
+
+.text-area-control {
+  border-radius: 5px;
+
+  &:focus {
+    border: 1px solid blue;
+    outline: 1px solid blue;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+}
+
+.label {
+  margin-top: 20px;
+  line-height: 2;
+}
+
+
+.save-btn {
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid grey;
+}
+
+.cancel-btn {
+  height: 30x;
+  border-radius: 5px;
+  margin-top: 20px;
+  background: white;
+  border: 1px solid blue;
+  color: blue;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 40px;
+}
+
+.container {
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 30px;
+  &:focus {
+    border: 1px solid blue;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+  }
+}
+
+.emoji {
+  border: none;
+  height: 20px;
+  background: white;
+  width: 100%;
+  text-align: left;
+  margin-top: 6px;
+  &:focus {
+    border: 1px solid blue;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+    height: 30px;
+  margin-top: -10px;
+  }
+}
+
+.non-inverted::after {
+  content: " \02C5";
+  margin-left: 20px !important;
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
+}
+
+:host::ng-deep.emoji-mart-preview{
+  display: none;
+}
+
+:host::ng-deep.emoji-mart-scroll {
+  width: 420px !important;
+}
+
+:host::ng-deep.emoji-mart{
+  width: 400px !important;
+}
+
+.icon-hide {
+  display: none;
+}

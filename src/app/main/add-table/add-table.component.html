@@ -1,0 +1,51 @@
+<h4>Add Table</h4>
+<form [formGroup]="addTableForm">
+  <div class="add-segment-form">
+    <span class="label">Name*</span>
+    <input type="text" class="form-control" formControlName="name" placeholder="Ex. Computer Software">
+    <span class="label">Icon</span>
+    <div class="container">
+      <button *ngIf="!addTableForm?.controls?.icon?.value" class="emoji"
+        (click)="isEmojiPickerVisible = !isEmojiPickerVisible;">😀
+        <span class="non-inverted"></span>
+      </button>
+      <button *ngIf="addTableForm?.controls?.icon?.value" class="emoji"
+        (click)="isEmojiPickerVisible = !isEmojiPickerVisible;">{{addTableForm?.controls?.icon?.value}}
+        <span class="non-inverted"></span>
+      </button>
+      <input type="text" class="icon-hide" formControlName="icon">
+    </div>
+
+    <emoji-mart class="emoji-mart" *ngIf="isEmojiPickerVisible" (emojiSelect)="addEmoji($event)"
+      title="Choose your emoji"></emoji-mart>
+
+    <span class="label">Color</span>
+    <!-- <select class="color-pallete" formControlName="color">
+      <option *ngFor="let color of colorPalette">
+      </option>
+    </select> -->
+    <div class="container">
+      <button *ngIf="!addTableForm?.controls?.color?.value" class="color-emoji" (click)="showColorPalette()">
+        <span class="non-inverted"></span>
+      </button>
+
+      <button *ngIf="addTableForm?.controls?.color?.value" class="circular-colors" (click)="showColorPalette()" [ngStyle]="{'background': addTableForm?.controls?.color?.value}" [style.border]="'1px solid ' + addTableForm?.controls?.color?.value">
+      </button>
+    </div>
+    <div class="show-colors" *ngIf="showColors">
+
+      <span style="margin-left: 12px;" *ngFor="let color of colorPalette">
+        <button class="circular-colors" [ngStyle]="{'background': color}" [style.border]="'1px solid ' + color" (click)="selectColor(color)">
+        </button>
+      </span>
+    </div>
+  </div>
+</form>
+
+<button class="save-btn" (click)="save()">
+  Add
+</button>
+
+<button class="cancel-btn" (click)="close()">
+  Cancel
+</button>
